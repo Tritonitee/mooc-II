@@ -19,4 +19,29 @@ public class LicensePlate {
         return country + " " + liNumber;
     }
 
+    @Override
+    public int hashCode() {
+        return this.liNumber.hashCode() + this.country.hashCode(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+        public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof LicensePlate)) {
+            return false;
+        }
+        LicensePlate compared = (LicensePlate) obj;
+
+        if (this.liNumber.equals(compared.liNumber) && this.country.equals(compared.country)) {
+            return true;
+        }
+        if(this.hashCode() == compared.hashCode()){
+            return true;
+        }
+        return false;
+    }
+    
+
 }
