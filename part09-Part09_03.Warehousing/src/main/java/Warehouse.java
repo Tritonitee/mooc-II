@@ -23,6 +23,11 @@ public class Warehouse {
         return this.capacity;
     }
 
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    
+
     public double howMuchSpaceLeft() {
         return this.capacity - this.balance;
     }
